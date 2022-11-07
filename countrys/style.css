@@ -10,7 +10,7 @@ body{
 .allPage{
     min-height: 100vh;
     width: 100%;
-    background-image: url('../w2.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.5)),url('../w2.jpeg');
     object-fit: cover;
     background-size: cover;
 }
