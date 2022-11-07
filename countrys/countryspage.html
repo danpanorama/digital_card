@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./getcountry.js"></script>
+    <script src="./app.js"></script>
+    <script src="./displayautocomplete.js"></script>
+    <script src="./getInputChoice.js"></script>
+    <script src="./getCityCostLiving.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="allPage  ">
+        <div class="error" id="error">
+
+        </div>
+        <div class="firstChild flexcol center ">
+            <div class="divsearch   paddingtop150 flexcol center">
+                <div class="flexrow w100 center ">
+                    <input id="searchinput" type="text" class="search">
+                     <button id="checkout" class="buttonSearch">search</button>
+                </div>
+            <div class="posre">
+                <div id="autocomplete" class="autocomplete posab">
+
+                </div>
+            </div>
+            </div>
+
+            <div class="buttonplaydiv flexcol center margintop50">
+                <button class="buttonSearch">play</button>
+            </div>
+        </div>
+        <div id="result" class="result">
+
+        </div>
+    </div>
+    <script src="./errFunc.js" async defer></script>
+</body>
+</html>
