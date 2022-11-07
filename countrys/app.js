@@ -11,8 +11,14 @@ window.addEventListener('load', async () => {
         }else{
             console.log('not have it')
              list = await getcountrys()
-            let textlist = JSON.stringify(list)
+             if(list.message){
+                return errorFunc(list.message)
+             }else{
+                  let textlist = JSON.stringify(list)
             localStorage.setItem('arraycitys',textlist);
+             }
+
+          
         }
 
 
