@@ -10,7 +10,7 @@ const options = {
 		'X-RapidAPI-Host': 'cities-cost-of-living1.p.rapidapi.com'
 	},
 	body: encodedParams
-};
+};   
 
 fetch('https://cities-cost-of-living1.p.rapidapi.com/get_cities_details_by_name', options)
 	.then(response => response.json())
