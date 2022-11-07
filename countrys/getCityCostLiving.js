@@ -18,7 +18,12 @@ function getCitysCostLiving(city,country){
         fetch('https://cities-cost-of-living1.p.rapidapi.com/get_cities_details_by_name', options)
             .then(response => response.json())
             .then(response => {
+                displayResult([])
                 console.log(response)
+                if(response.message){
+                    return errorFunc(response.message)
+                }
+
                 let name = response.data[0].name;
                 let localstorage = localStorage.getItem(name);
                 let flag = false
@@ -40,7 +45,7 @@ function getCitysCostLiving(city,country){
                     let json = JSON.parse(localstorage);
                     return displayResult(json);
                 }
-                errorFunc(response.message)
+                
               }
             
             })
