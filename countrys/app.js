@@ -1,9 +1,19 @@
 window.addEventListener('load', async () => {
 
     try {
-        // let list = await getcountrys()
+       
+        var list;
         var listtext = localStorage.getItem('arraycitys')
-        var list = JSON.parse(listtext)
+     
+        if(listtext && listtext != ""){
+            console.log('have it')
+             list = JSON.parse(listtext);
+        }else{
+            console.log('not have it')
+             list = await getcountrys()
+            let textlist = JSON.stringify(list)
+            localStorage.setItem('arraycitys',textlist);
+        }
 
 
         if (list.message) {
@@ -12,8 +22,7 @@ window.addEventListener('load', async () => {
         }
 
 
-        //   let textlist = JSON.stringify(list)
-        //     localStorage.setItem('arraycitys',textlist);
+       
 
 
 
