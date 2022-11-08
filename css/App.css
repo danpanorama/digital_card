@@ -91,7 +91,7 @@ h3{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
-background-color: antiquewhite;
+
 }
 a{
     text-decoration: none;
