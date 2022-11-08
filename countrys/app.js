@@ -6,7 +6,7 @@ window.addEventListener('load', async () => {
         var listtext = localStorage.getItem('arraycitys')
      
         if(listtext && listtext != "You have exceeded the rate limit per minute for your plan, BASIC, by the API provider"){
-            console.log('have it on local storage so i pass it away')
+            console.log('have it on local storage so i pass it away');
              list = JSON.parse(listtext);
         }else{
             console.log('not haveing this on my local storage')
