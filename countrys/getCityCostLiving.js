@@ -9,7 +9,7 @@ function getCitysCostLiving(city,country){
             method: 'POST',
             headers: {
                 'content-type': 'application/x-www-form-urlencoded',
-                'X-RapidAPI-Key': 'c11f91cf96msh01ebd70f0c3b0b8p15dc63jsn80f33823c486',
+                'X-RapidAPI-Key': '6380e2721emsh09029194b37c990p12e2dajsn13c1fd802b5f',
                 'X-RapidAPI-Host': 'cities-cost-of-living1.p.rapidapi.com'
             },
             body: encodedParams
