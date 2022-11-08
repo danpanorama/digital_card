@@ -18,35 +18,44 @@ function getCitysCostLiving(city,country){
         fetch('https://cities-cost-of-living1.p.rapidapi.com/get_cities_details_by_name', options)
             .then(response => response.json())
             .then(response => {
-                displayResult([])
+                clearResult()
                 console.log(response)
-                if(response.message){
-                    return errorFunc(response.message)
-                }
-
-                let name = response.data[0].name;
-                let localstorage = localStorage.getItem(name);
-                let flag = false
-                if(localstorage){
-                    console.log('have it')
-                    flag = true
-                }
-
+              
               if(response.data){
                 let data = JSON.stringify(response.data);
                 localStorage.setItem(response.data[0].name,data);
                  return displayResult(response.data[0]);
-              
 
               }else{
+                let name = city;
+                let localstorage = localStorage.getItem(name);
+                let flag = false
+                if(localstorage){
+                    console.log('have it on local storage the city details')
+                    flag = true
+                }
                 
                 if(flag){
                     console.log('even if you are not ready for the day it cannot always be night  ! !!')
                     let json = JSON.parse(localstorage);
-                    return displayResult(json);
+                    return displayResult(json[0]);
                 }
+                return errorFunc(response.message)
+
                 
               }
+
+
+
+           
+
+                if(response.message && !flag){
+                    return errorFunc(response.message)
+                }
+
+
+             
+
             
             })
             .catch(err => {console.error(err) });

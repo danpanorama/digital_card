@@ -35,11 +35,14 @@ function displayResult(arr){
     if(arr.message){
         return console.log(arr)
     }
+   
+console.log(arr)
+    
     let cityname = arr.name;
     let countryname = arr.country;
     let rent_index = arr.rent_index;
     let insideDetails= arr.cost_of_living_details;
-    let wayofShekel = insideDetails[1];
+    let wayofShekel = insideDetails.length > 0 ? insideDetails[1] : insideDetails[0];
     let costOfLivingLoop = wayofShekel.details
 
     let result = document.getElementById('result');
@@ -83,6 +86,16 @@ function displayResult(arr){
 
     }
 
-   
+ 
 
+}
+
+
+
+function clearResult(){
+    let result = document.getElementById('result');
+ 
+    while (result.firstChild) {
+        result.removeChild(result.firstChild)
+    }
 }

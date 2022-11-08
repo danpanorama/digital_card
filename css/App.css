@@ -5,9 +5,9 @@
 body{
     padding: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
 .paddingApp{
@@ -16,7 +16,7 @@ body{
 background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)), url('../w1.jpeg');
 background-size: cover;
 object-fit: cover;
-
+min-height: 100vh;
 height: 100%;
 /* clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); */
 
