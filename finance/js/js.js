@@ -39,6 +39,24 @@ window.addEventListener('load',()=>{
     })
 
 
+    let flag3 = true
+    let popup3 = document.getElementById('popup3')
+    document.getElementById('dirot').addEventListener('click',(e)=>{
+        if(flag2){
+            popup3.classList.remove('disabledery');
+            document.getElementById('plus3').innerText = "-"
+            flag3 = false;
+
+        }else{
+            popup3.classList.add('disabledery');
+            document.getElementById('plus3').innerText = "+"
+           
+            flag3 = true;
+        }
+        
+    })
+
+
 
     document.getElementById('country').addEventListener('click' , async (e)=>{
         try{
